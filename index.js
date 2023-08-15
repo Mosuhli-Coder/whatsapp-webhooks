@@ -36,6 +36,7 @@ app.post("/webhooks", (req, res) => {
   console.log(JSON.stringify(body_param, null, 2));
 
   if (body_param.object) {
+    console.log("Inside body param: " + body_param)
     if (
       body_param.entry &&
       body_param.entry[0].changes &&
