@@ -55,7 +55,7 @@ app.post("/webhooks", (req, res) => {
       axios({
         method: "POST",
         url:
-          "https://graph.facebook.com/v13.0/" +
+          "https://graph.facebook.com/v17.0/" +
           phon_no_id +
           "/messages?access_token=" +
           token,
