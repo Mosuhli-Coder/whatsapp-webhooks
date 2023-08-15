@@ -5,11 +5,11 @@ require('dotenv').config()
 
 const app = express().use(bodyParser.json());
 
-const port = 8000;
+const port = process.env.PORT;
 const token = process.env.TOKEN;
 const mytoken = process.env.MY_TOKEN;
 
-app.listen(port || process.env.PORT, () => {
+app.listen(port, () => {
   console.log(`webhook is listening on port ${port}`);
 });
 
@@ -36,8 +36,8 @@ app.post("/webhooks", (req, res) => {
     if (
       body_param.entry &&
       body_param.entry[0].changes &&
-      body_param.entry[0].changes[0].value.message &&
-      body_param.entry[0].changes[0].value.message[0]
+      body_param.entry[0].changes[0].value.messages &&
+      body_param.entry[0].changes[0].value.messages[0]
     ) {
       let phon_no_id =
         body_param.entry[0].changes[0].value.metadata.phone_number_id;
