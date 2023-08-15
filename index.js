@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
-require('dotenv').config()
+require("dotenv").config();
 
 const app = express().use(bodyParser.json());
 
@@ -17,12 +17,12 @@ app.get("/webhooks", (req, res) => {
   let mode = req.query["hub.mode"];
   let challenge = req.query["hub.challenge"];
   let token = req.query["hub.verify_token"];
-  
+
   console.log(JSON.stringify(token, null, 2));
 
   if (mode && token) {
     if (mode === "subscribe" && token === mytoken) {
-        console.log(JSON.stringify(token, null, 2));
+      console.log(JSON.stringify(token, null, 2));
       res.status(200).send(challenge);
     } else {
       res.status(403);
@@ -78,5 +78,6 @@ app.post("/webhooks", (req, res) => {
 });
 
 app.get("/", (req, res) => {
+  console.log("hello this is webhook setup");
   res.status(200).send("hello this is webhook setup");
 });
