@@ -106,7 +106,7 @@ app.post("/webhooks", (req, res) => {
       body_param.entry[0].changes &&
       body_param.entry[0].changes[0].value.messages &&
       body_param.entry[0].changes[0].value.messages[0] &&
-      session.userid
+      req.session.userid 
     ) {
       let phon_no_id =
         body_param.entry[0].changes[0].value.metadata.phone_number_id;
