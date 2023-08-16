@@ -76,7 +76,7 @@ app.post("/webhooks", (req, res) => {
       console.log("boady param " + msg_body);
 
       session = req.session;
-      session.userid = req.body.phon_no_id;
+      session.userid = phon_no_id;
       console.log(req.session);
       console.log(session.userid);
       if (
