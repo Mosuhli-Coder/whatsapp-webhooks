@@ -1,0 +1,110 @@
+{
+    "onboarding_steps": [
+        {
+            "step_number": 1,
+            "message": "Howdy buddy! My name is Thebe. I'm on a mission to create affordable emergency credit with no collateral, specially tailored for tertiary students. How can I assist you today?",
+            "input_type": "text",
+            "response_type": "button",
+            "options": [
+                "About Thebe",
+                "Join Thebe"
+            ],
+            "condition_map": {
+                "input_equals": "Join Thebe",
+                "next_step": 2
+            },
+            "next_step": 15
+        },
+        {
+            "step_number": 2,
+            "message": "Alright Cool! Let's get you started. Let's Start With Your First Name.",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 3
+        },
+        {
+            "step_number": 3,
+            "message": "Hi {user_name}! What is your Last Name?",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 4
+        },
+        {
+            "step_number": 4,
+            "message": "Thanks! What is your School ID ?",
+            "input_type": "file",
+            "response_type": "text",
+            "next_step": 5
+        },
+        {
+            "step_number": 6,
+            "message": "That's a cool ID number😸 Next please provide your school email address.",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 7
+        },
+        {
+            "step_number": 7,
+            "message": "Let's confirm your WhatsApp Phone Number. What is it?",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 8
+        },
+        {
+            "step_number": 8,
+            "message": "Nice! 😺 we're almost done signing you up. What is the name of your University?",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 9
+        },
+        {
+            "step_number": 9,
+            "message": "Please upload a photo of your school ID card.",
+            "input_type": "file",
+            "response_type": "text",
+            "next_step": 10
+        },
+        {
+            "step_number": 10,
+            "message": "Provide your Bank Name in full?",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 11
+        },
+        {
+            "step_number": 11,
+            "message": "And what is your Bank Account Number?",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 12
+        },
+        {
+            "step_number": 12,
+            "message": "Now, on the fun part.😺 Who are your Backers? Thebe builds your creditworthiness by allowing you to get close friends who can vouch for you. I need at least 2 people that can be your Backers. Sample input: (Friend`s full name, WhatsApp Number) e.g 1. Thebe Yame, 71123456 2. Thuto Etsile, 72123456",
+            "input_type": "text",
+            "response_type": "text",
+            "next_step": 13
+        },
+        {
+            "step_number": 13,
+            "message": "Hurray! 🥳🎉🎊 The registration was a success!✨ Your application is pending approval. I will be notified once it's approved.",
+            "input_type": null,
+            "response_type": "text",
+            "next_step": 14
+        },
+        {
+            "step_number": 14,
+            "message": "The KYC review usually takes about 5 minutes. So stay put in the meantime, and a Thebe Agent will get in contact with you shortly.",
+            "input_type": null,
+            "response_type": "text",
+            "next_step": null
+        },
+        {
+            "step_number": 15,
+            "message": "About Thebe",
+            "input_type": null,
+            "response_type": "text",
+            "next_step": null
+        }
+    ]
+}
