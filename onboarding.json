@@ -4,16 +4,20 @@
     "stages":[
         {
             "step_number": 1,
-            "message": "Howdy buddy! My name is Thebe. I'm on a mission to create affordable emergency credit with no collateral, specially tailored for tertiary students. How can I assist you today?",
             "input_type": "text",
-            "response_type": "text",
-            "condition_map": null
+            "input":"",
+            "responses": [ 
+                {
+                    "response_type": "text",
+                    "text": "Howdy buddy! My name is Thebe. I'm on a mission to create affordable emergency credit with no collateral, specially tailored for tertiary students. How can I assist you today?"
+                }
+            ],
+            "condition_map": []
         },
         {
             "step_number": 2,
             "input_type": "text",
             "input":"",
-            "response_type": "button",
             "responses": [
                 {
                     "response_type": "text",
