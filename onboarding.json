@@ -11,28 +11,41 @@
             "step_number": 2,
             "input_type": "text",
             "response_type": "button",
-            "response": {
-                "responses": [
-                    {
-                        "response_type": "text",
-                        "text": "Great! If you have any questions, feel free to ask."
+            "responses": [
+                {
+                    "response_type": "text",
+                    "text": "Great! If you have any questions, feel free to ask."
+                },
+                {
+                    "response_type": "button",
+                    "options": [
+                        {
+                            "label": "About Thebe",
+                            "value": "about_thebe"
+                        },
+                        {
+                            "label": "Join Thebe",
+                            "value": "join_thebe"
+                        }
+                    ]
+                }
+            ],
+            "condition_map": [
+                {
+                    "Hi":{
+                        "logic":{
+                            "l_1":{"type":<operation , endpoint-call, none>, "data":""},
+                            "return":{"type":<"stage","response">, "map":3, "arg":""}
+                        }
                     },
-                    {
-                        "response_type": "button",
-                        "options": [
-                            {
-                                "label": "About Thebe",
-                                "value": "about_thebe"
-                            },
-                            {
-                                "label": "Join Thebe",
-                                "value": "join_thebe"
-                            }
-                        ]
+                    "$input > some_value":{
+                        "logic":{
+                            "l_1":{"type":<operation , endpoint-call>, "data":""},
+                            "return":{"type":<"stage","response">, "map":3, "arg":""}
+                        } 
                     }
-                ]
-            },
-            "condition_map": null
+                }
+            ]
         },
         {
             "step_number": 3,
