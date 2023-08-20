@@ -1,5 +1,7 @@
 {
-    "onboarding_steps": [
+    "name":"onboarding_steps",
+    "description":"ACA Onboarding Bot Flow",
+    "stages":[
         {
             "step_number": 1,
             "message": "Howdy buddy! My name is Thebe. I'm on a mission to create affordable emergency credit with no collateral, specially tailored for tertiary students. How can I assist you today?",
