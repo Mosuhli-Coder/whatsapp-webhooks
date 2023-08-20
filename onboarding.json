@@ -9,19 +9,8 @@
             "responses": [ 
                 {
                     "response_type": "text",
-                    "text": "Howdy buddy! My name is Thebe. I'm on a mission to create affordable emergency credit with no collateral, specially tailored for tertiary students. How can I assist you today?"
-                }
-            ],
-            "condition_map": []
-        },
-        {
-            "step_number": 2,
-            "input_type": "text",
-            "input":"",
-            "responses": [
-                {
-                    "response_type": "text",
-                    "text": "Great! If you have any questions, feel free to ask."
+                    "text": "Howdy buddy! My name is Thebe. I'm on a mission to create affordable emergency credit with no collateral, specially tailored for tertiary students. How can I assist you today?",
+                    "next":"stage_2"
                 },
                 {
                     "response_type": "button",
@@ -34,15 +23,36 @@
                             "label": "Join Thebe",
                             "value": "join_thebe"
                         }
-                    ]
+                    ],
+                    "next":"stage_2"
                 }
+            ],
+            "condition_map": []
+        },
+        {
+            "step_number": 2,
+            "input_type": "text",
+            "input":"",
+            "responses": [
+                {
+                    "response_type": "text",
+                    "text": "Alright Cool! Let's get you started. Let's Start With Your First Name.",
+                    "next":"stage_3"
+                },
+               
             ],
             "condition_map": [
                 {
-                    "Hi":{
+                    "about_thebe":{
                         "logic":{
                             "l_1":{"type":<operation , endpoint-call, none>, "data":""},
-                            "return":{"type":<"stage","response">, "map":3, "arg":""}
+                            "return":{"type":<"stage","response">, "map":0, "arg":""}
+                        }
+                    },
+                    "join_thebe":{
+                        "logic":{
+                            "l_1":{"type":<none>, "data":""},
+                            "return":{"type":<"response">, "map":3, "arg":""}
                         }
                     },
                     "$input > some_value":{
@@ -56,7 +66,6 @@
         },
         {
             "step_number": 3,
-            "message": "Alright Cool! Let's get you started. Let's Start With Your First Name.",
             "input_type": "button",
             "response_type": "text",
             "condition_map": {
