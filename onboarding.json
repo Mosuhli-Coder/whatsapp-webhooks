@@ -12,6 +12,7 @@
         {
             "step_number": 2,
             "input_type": "text",
+            "input":"",
             "response_type": "button",
             "responses": [
                 {
