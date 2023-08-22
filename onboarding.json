@@ -127,13 +127,6 @@
             "input_type": null,
             "response_type": "text",
             "next_step": null
-        },
-        {
-            "step_number": 15,
-            "message": "About Thebe",
-            "input_type": null,
-            "response_type": "text",
-            "next_step": null
         }
     ]
 }
