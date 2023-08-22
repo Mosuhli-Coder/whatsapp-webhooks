@@ -38,27 +38,27 @@
                     "response_type": "text",
                     "text": "Alright Cool! Let's get you started. Let's Start With Your First Name.",
                     "next":"stage_3"
-                },
+                }
                
             ],
             "condition_map": [
                 {
                     "about_thebe":{
                         "logic":{
-                            "l_1":{"type":<operation , endpoint-call, none>, "data":""},
-                            "return":{"type":<"stage","response">, "map":0, "arg":""}
+                            "l_1":{"type":"<operation , endpoint-call, none>", "data":""},
+                            "return":{"type":"<stage,response>", "map":0, "arg":""}
                         }
                     },
                     "join_thebe":{
                         "logic":{
-                            "l_1":{"type":<none>, "data":""},
-                            "return":{"type":<"response">, "map":3, "arg":""}
+                            "l_1":{"type":"<none>", "data":""},
+                            "return":{"type":"<response>", "map":3, "arg":""}
                         }
                     },
                     "$input > some_value":{
                         "logic":{
-                            "l_1":{"type":<operation , endpoint-call>, "data":""},
-                            "return":{"type":<"stage","response">, "map":3, "arg":""}
+                            "l_1":{"type":"<operation , endpoint-call>", "data":""},
+                            "return":{"type":"<stage, response>", "map":3, "arg":""}
                         } 
                     }
                 }
